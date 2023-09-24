@@ -2,7 +2,7 @@
 
 import { board, currentPlayer, togglePlayer } from './data.js';
 import { disableClick } from '../src/events/Listener.js';
-import { checkWinner } from './init.js';  // Assuming you have a function for this, adjust if not
+import { checkWinner } from './init.js';
 
 export const handleCellClick = (event) => {
     const cell = event.target;
@@ -12,7 +12,7 @@ export const handleCellClick = (event) => {
         board[index] = currentPlayer;
         updateCell(index);
         
-        if (checkWinner(board)) { // assuming you have a function to check for a winner
+        if (checkWinner(board)) { 
             setTimeout(() => {
                 alert(currentPlayer + " Lost");
                 disableClick();
@@ -24,7 +24,7 @@ export const handleCellClick = (event) => {
             }, 50);
         }
 
-        togglePlayer();  // Switch to the other player
+        togglePlayer();  // 
         updateCurrentPlayerDisplay();
     }
 }
