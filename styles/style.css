@@ -1,50 +1,37 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    height: 100vh;
     margin: 0;
-    padding: 0;
-}
-
-.calculator-container {
-    width: 300px;
-    margin: 100px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.input-container {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
 }
 
-.input-number {
-    width: 45%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.sum-button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+#board {
+    display: grid;
+    grid-template-columns: 60px 60px 60px;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
     cursor: pointer;
-    font-size: 16px;
-    outline: none;
 }
 
-.sum-button:hover {
-    background-color: #45a049;
-}
-
-.output {
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: bold;
+#restart {
+    margin-top: 10px;
 }
